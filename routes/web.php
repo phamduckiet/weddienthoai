@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin.share.master');
 });
-Route::get('/admin/createcategory', [\App\Http\Controllers\CategoryController::class, 'index']);
+Route::get('/admin/createcategory/create', [\App\Http\Controllers\CategoryController::class, 'create']);
+Route::post('/admin/createcategory/create', [\App\Http\Controllers\CategoryController::class, 'store']);
